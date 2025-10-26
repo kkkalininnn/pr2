@@ -1,0 +1,109 @@
+/* Общие настройки */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #0a0a0a; /* Почти чёрный */
+  background-image: 
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23111" opacity="0.3"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="%23222" stroke-width="1"/></svg>'),
+    linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95));
+  color: #e0d6c5; /* Потускневший бежевый — как старая бумага */
+  font-family: 'Courier New', monospace;
+  line-height: 1.6;
+  padding: 20px;
+  background-attachment: fixed;
+}
+
+/* Заголовки */
+h1, h2, h3 {
+  font-family: 'Georgia', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #c94c4c; /* Тёмно-красный — как кровь или тюремные татуировки */
+  text-shadow: 1px 1px 2px #000;
+}
+
+h1 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+h1::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: #c94c4c;
+  margin: 10px auto;
+}
+
+/* Параграфы и текст */
+p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 10px;
+}
+
+/* Контейнеры */
+header, main, section {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Подзаголовок */
+header p {
+  text-align: center;
+  font-style: italic;
+  color: #a89f8f;
+  margin-bottom: 40px;
+}
+
+/* Эффект "старой бумаги" для блоков */
+section {
+  background: rgba(20, 15, 10, 0.6);
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 25px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  position: relative;
+}
+
+/* Декоративные элементы — как тюремные тату */
+section::before {
+  content: "❖";
+  position: absolute;
+  top: -12px;
+  left: 20px;
+  color: #c94c4c;
+  font-size: 1.5rem;
+}
+
+/* Ссылки (если появятся) */
+a {
+  color: #d4af37; /* Золотистый — как "закон" */
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #c94c4c;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
